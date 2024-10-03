@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1a0033;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header ul li {
+    display: inline;
+}
+
+.header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.content p {
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    background: #e600e6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.buttons a:hover {
+    background: #ffffff;
+    color: #e600e6;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.ai-icon {
+    background: radial-gradient(circle, rgba(255,0,255,1) 0%, rgba(0,0,0,0.7) 60%);
+    padding: 50px;
+    border-radius: 50%;
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-icon h2 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.tech-lines {
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.tech-lines::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
