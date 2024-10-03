@@ -1,9 +1,14 @@
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0;
+    margin: -10px;
+    padding: -10px;
     font-family: 'Arial', sans-serif;
     background: #1a0033;
     color: #fff;
+    background-image: url('images/vecteezy_colorful-abstract-wallpaper-modern-background-ai-generated_21171659.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -14,6 +19,8 @@ body {
     height: 100vh;
     text-align: center;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0;
 }
 
 .header {
@@ -23,13 +30,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 30px;
+    flex-wrap: wrap; /* Allows wrapping of elements */
+}
+
+.header img {
+    max-width: 100%; /* Ensure logo is responsive */
+    height: auto;
 }
 
 .header ul {
-    list-style: none;
+    list-style: lower-greek;
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .header ul li {
@@ -46,28 +60,17 @@ body {
     text-decoration: underline;
 }
 
-.search-box {
-    position: relative;
-}
-
-.search-box input[type="text"] {
-    padding: 10px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    color: #fff;
-}
-
+/* Content */
 .content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffffff;
+    margin-bottom: 15px;
 }
 
 .content p {
-    max-width: 500px;
+    max-width: 100%;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 20px;
-    align-items: center;
 }
 
 .buttons {
@@ -92,44 +95,124 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .social-icons a {
     margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #fff;
 }
 
+/* AI Icon */
 .ai-icon {
     background: radial-gradient(circle, rgba(255,0,255,1) 0%, rgba(0,0,0,0.7) 60%);
-    padding: 50px;
+    padding: 30px;
     border-radius: 50%;
     margin-top: 40px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .ai-icon h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ffffff;
 }
 
+/* Tech lines at bottom */
 .tech-lines {
     position: absolute;
     bottom: 0;
-    height: 150px;
+    height: 100px;
     width: 100%;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
 }
 
-.tech-lines::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.2);
+/* Responsive Design: Adjust layout for smaller screens */
+@media (max-width: 1024px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .buttons a {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .ai-icon {
+        width: 120px;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .buttons a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .ai-icon h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header ul li {
+        margin-bottom: 10px;
+    }
+
+    .header {
+        padding: 10px;
+        justify-content: space-around;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .ai-icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .ai-icon h2 {
+        font-size: 1.5rem;
+    }
+
+    .buttons a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 1rem;
+    }
 }
