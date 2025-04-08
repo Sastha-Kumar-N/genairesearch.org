@@ -152,4 +152,23 @@
       font-size: 1.5em;
     }
   }
+  .go-back-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .go-back-btn:hover {
+    background-color: #334155;
+  }
+  
+  body.dark-mode .go-back-btn {
+    background-color: #334155;
+    color: #e2e8f0;
+  }
   
